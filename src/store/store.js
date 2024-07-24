@@ -37,7 +37,7 @@ export default createStore({
     actions:{
          getWeather(context){ 
           //함수명만 작성 , context전역객체 state참조에 사용함
-            //const API_URL=`https://api.openweathermap.org/data/2.5/weather?q=${context.state.weatherData.city}&appid=a86fd58921986176b99218ca53895f2d`;
+          
             const API_KEY=import.meta.env.VITE_API_KEY;  //.env파일의 API_KEY
   
             const API_URL=`https://api.openweathermap.org/data/2.5/weather?q=${context.state.weatherData.city}&appid=${API_KEY}`;
